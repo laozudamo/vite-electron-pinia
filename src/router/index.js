@@ -15,7 +15,17 @@ const routes = [
     path: '/main',
     name: 'main',
     component: () => import('@/views/main/index.vue')
-  }
+  },
+  {
+    path: '/theClass',
+    name: 'theClass',
+    component: () => import('@/views/onClass/index.vue')
+  },
+  {
+    path: '/mouseMove',
+    name: 'mouseMove',
+    component: () => import('@/views/onMouseMove/index.vue')
+  },
 ]
 
 const router = createRouter({

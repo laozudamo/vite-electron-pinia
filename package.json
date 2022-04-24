@@ -24,10 +24,11 @@
     "cross-env": "^7.0.3",
     "electron": "^18.0.2",
     "electron-builder": "^22.14.13",
-    "vite": "^2.9.0",
-    "wait-on": "^6.0.1",
     "sass": "^1.50.0",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.0",
+    "wait-on": "^6.0.1"
   },
   "build": {
     "appId": "com.your-website.your-app",

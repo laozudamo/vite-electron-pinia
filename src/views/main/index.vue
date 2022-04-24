@@ -1,15 +1,14 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted } from "vue";
 
-const list = ref([1, 3, 4, 5])
-
-const itemRefs = ref([])
-
-onMounted(() => console.log(itemRefs.value))
+const myRefs = ref([]);
+onMounted(() => {
+  console.log(myRefs.value);
+});
 </script>
 
 <template>
-    <li v-for="item in list" :key="item" ref="itemRefs">
-      {{ item }}
-    </li>
+  <li v-for="item in 10" :key="item" ref="myRefs">
+    {{ item }}
+  </li>
 </template>

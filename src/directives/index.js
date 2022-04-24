@@ -1,18 +1,13 @@
-function add(a, b) {
-  console.log('调用了add函数', a + b);
-}
+const roles = ['admin', 'superAdmin']
 
-export function registerDir(app) {
+function add(app) {
   app.directive('add', {
-    created(arg,binding) {
-      add(binding.value.a, binding.value.b);
-      console.log(arg,"这是菜地过来的参数")
+    created(arg, binding) {
+      console.log(arg, "这是菜地过来的参数")
     },
-    beforeMount() { },
     mounted(el, binding, vnode) {
       console.log('mounted钩子', el);
       el.style.color = 'red';
-      add(binding.value.a, binding.value.b);
       console.log(vnode)
     },
     beforeUpdate() { },
@@ -23,6 +18,26 @@ export function registerDir(app) {
     // 在绑定元素的父组件卸载之后调用
     unmounted() {
       console.log('进行一些卸载操作');
-     }
+    }
   })
+}
+
+// 自定义权限控制
+function pression(app) {
+  let role = 'admin'
+  const hasPre = roles.includes(role)
+  app.directive('pression', {
+    beforeMount(el) {
+      if (hasPre) {
+        console.log('有权限')
+      } else {
+        el.removeChild()
+      }
+    }
+  })
+}
+
+export function registerDir(app) {
+  add(app)
+  pression(app)
 }
