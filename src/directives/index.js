@@ -37,7 +37,18 @@ function pression(app) {
   })
 }
 
-export function registerDir(app) {
+
+function par(app) {
+  app.directive('par', {
+    mounted(el, binding, vnode) {
+      // binding 里面的值 arg参数 value值 instance实例对象 dir指令对象
+      console.log('bing',binding, binding.instance.testVal)
+    }
+  })
+}
+
+export function RegisterDir(app) {
   add(app)
   pression(app)
+  par(app)
 }

@@ -2,25 +2,28 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import 'normalize.css'
 import './styles/index.scss'
-import { RegesterRouter } from './router'
-import { RegesterPina } from './store'
-import { regsiterGlobalCom } from '@/components/regsiterGlobalCom.js'
-import { registerDir } from './directives/index.js'
-
+import { RegisterRouter } from './router'
+import { RegisterPina } from './store'
+import { RegisterGlobalCom } from '@/components/registerGlobalCom.js'
+import { RegisterDir } from './directives/index.js'
+import { RegisterPlugin } from './plugin/index.js'
 function regesterApp() {
   const app = createApp(App)
 
   // 注册路由
-  RegesterRouter(app)
+  RegisterRouter(app)
 
   // 注册方法
-  registerDir(app)
+  RegisterDir(app)
 
   // 注册全局组件
-  regsiterGlobalCom(app)
+  RegisterGlobalCom(app)
+
+  // 注册插件
+  RegisterPlugin(app)
 
   // 注册store
-  RegesterPina(app)
+  RegisterPina(app)
   // 渲染
   app.mount('#app')
 }

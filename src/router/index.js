@@ -33,6 +33,6 @@ const router = createRouter({
   routes
 })
 
-export function RegesterRouter(app) {
+export function RegisterRouter(app) {
   app.use(router)
 }

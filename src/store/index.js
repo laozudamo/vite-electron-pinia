@@ -1,7 +1,7 @@
 import { createPinia } from 'pinia'
 const store = createPinia();
 
-export function RegesterPina(app) {
+export function RegisterPina(app) {
   app.use(store);
 }
 
