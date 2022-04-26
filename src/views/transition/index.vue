@@ -3,9 +3,7 @@ import { ref } from "vue";
 import Modal from "./Modal.vue";
 let show = ref(true);
 const showModal = ref(false);
-function changeTel() {
-  console.log(2);
-}
+
 </script>
 
 <template>
