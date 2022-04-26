@@ -26,6 +26,11 @@ const routes = [
     name: 'mouseMove',
     component: () => import('@/views/onMouseMove/index.vue')
   },
+  {
+    path: '/transition',
+    name: 'transition',
+    component: () => import('@/views/transition/index.vue')
+  },
 ]
 
 const router = createRouter({
