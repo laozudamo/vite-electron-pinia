@@ -15,6 +15,9 @@
     "axios": "^0.26.1",
     "normalize.css": "^8.0.1",
     "pinia": "^2.0.13",
+    "sudo-prompt": "^9.2.1",
+    "systeminformation": "^5.21.11",
+    "vite-plugin-electron-renderer": "^0.14.5",
     "vue": "3.2.33",
     "vue-router": "4"
   },

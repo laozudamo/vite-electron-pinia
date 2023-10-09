@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import store from '../index.js'
 
-const userStore = defineStore('counter', {
+export const userStore = defineStore('counter', {
   state() {
     return {
       name: 'lucy',
